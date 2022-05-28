@@ -1,0 +1,112 @@
+@use "sass:math";
+@import "calculation";
+@import "general";
+
+.offers {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    padding: calc(40px + (80 - 40) * ((100vw - 360px) / (1530 - 360))) calc(0px + (130 - 0) * ((100vw - 360px) / (1530 - 360)));
+  }
+
+  .card-offer {
+    @media (max-width: $mobile){
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      padding: 30px 25px;
+      row-gap: 30px;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    @media (min-width: $mobile){
+      box-shadow: 0px 4px 46px rgba(33, 37, 46, 0.22);
+    }
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      column-gap: 30px;
+      border-radius: 10px;
+      background-color: #FFFFFF;
+      align-items: center;
+      margin-bottom: 30px;
+      padding: 38px 0;
+
+    .hidden-title {
+      @media (max-width: $mobile){
+        display: block;
+        font-size: rem(14);
+        line-height: 163.42%;
+        opacity: 0.5;
+        color: #001237;
+      }
+      display: none;
+    }
+    
+    .service-name__text {
+      @media (max-width: $mobile){
+        font-size: rem(16);
+        line-height: rem(17);
+        font-weight: 600;
+      }
+      font-size: rem(16);
+      line-height: rem(19);
+      color: #263238;
+    }
+
+    .franchise__text {
+      font-size: rem(18);
+      line-height: rem(22);
+      color: #263238;
+      white-space: nowrap;
+    }
+
+     .price {
+      &-new {
+        font-weight: 700;
+        font-size: rem(18);
+        line-height: rem(22);
+        color: #263238;
+        white-space: nowrap;
+      }
+      &-old {
+        position: relative;
+        @extend .price-new;
+        opacity: 0.5;
+        white-space: nowrap;
+      }
+      &-old::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        bottom: 10px;
+        left: 0;
+        height: 1px;
+        background-color: #AEAEAE;
+        transform: rotate(-10deg);
+      }
+    }
+  }
+
+  .card-offer:last-child{
+    margin-bottom: 0;
+  }
+
+  .make-order-button {
+    @media (max-width: $mobile){
+      padding: rem(15) rem(99);
+    }
+    font-size: rem(14);
+    padding: rem(15) rem(46);
+  }
+
+  .hidden-card {
+    @media (max-width: $mobile){
+      display: none;
+    }
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}

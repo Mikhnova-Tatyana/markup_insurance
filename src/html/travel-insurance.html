@@ -1,0 +1,136 @@
+<section class="travel-insurance section_light-blue">
+  <div class="travel-insurance__container _container">
+    
+    <div class="travel-insurance__form-wrapper">
+      <form class="travel-insurance__form form-insurance" action="/">
+        <div class="travel-insurance__form-title title title-black title-center">Туристическое страхование</div>
+        <div class="form-insurance__travel-data">
+          <div class="form-insurance__travel-direction">
+            <label class="form-insurance__lable" for="trip-direction">Направление поездки</label>
+            <input class="form-insurance__input" type="text" id="trip-direction" name="trip-direction"/>
+          </div>
+          <div class="form-insurance__travel-period travel-period">
+            <div class="travel-period__time">
+              <label class="form-insurance__lable">Период поездки</label>
+              <p class="form-insurance__text">11 дней</p>
+            </div>
+              <div class="travel-period__wrapper">
+                <div class="travel-period-from">
+                  <label class="lable-gray" for="travel-period-from">От</label>
+                  <input class="form-insurance__input travel-period__input datepicker-input" type="date" value="2019-11-07" name="travel-period-from" id="travel-period-from"/>
+                </div>
+                <div class="travel-period-to">
+                  <label class="lable-gray" for="travel-period-to">До</label>
+                  <input class="form-insurance__input travel-period__input" type="date" value="2019-11-07" name="travel-period-to" id="travel-period-to"/>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="form-insurance__links links-insurance">
+          <span class="links-insurance__text">Например:</span>
+          <a class="links-insurance__item item1" href="#">
+            Шенгенская зона (Европа)
+          </a>
+          <a class="links-insurance__item" href="#">
+            Весь мир
+          </a>
+        </div>
+
+        <fieldset class="form-insurance__tourist-data tourist-data">
+          <legend class="tourist-data__title title-center">Данные о туристах</legend>
+          <div class="tourist-data__border">
+            <div class="tourist-data__tourist-number">Турист 1</div>
+            <div class="tourist-data__wrapper">
+              <div class="tourist-data__tourist-birthday">
+                <label class="tourist-data__lable" for="tourist-birthday">
+                  Дата рождения
+                </label>
+                <input class="tourist-data__input" type="text" name="tourist-birthday" id="tourist-birthday"/>
+              </div>
+              <div class="tourist-data__tourist-target">
+                <label class="tourist-data__lable">
+                  Цель поездки
+                </label>
+
+                <div class="tourist-data__select select">
+                  <div class="select__header">
+                    <span class="select__current">посещение родственников</span>
+                    <img class="select__icon" width="14" height="7" src="../img/arrow_down_blue.svg" alt="arrow"/>
+                  </div>
+                  <ul class="select__body">
+                    <li class="select__item">посещение родственников</li>
+                    <li class="select__item">покупка сувениров</li>
+                    <li class="select__item">командировка</li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </fieldset>
+          <div class="form-insurance__buttons">
+            <div class="form-insurance__add-button-wrapper">
+              <div class="form-insurance__add-button"></div>
+              <p class="form-insurance__add-button-label">Добавить туриста</p>
+            </div>
+            <a href="#" class="form-insurance__button button button_orange">
+              От 1296 грн - смотреть полисы
+            </a>
+          </div>
+      </form>
+
+        <div class="travel-insurance__options insurance-options">
+          <h2 class="insurance-options__title title-center title-black">
+            Другие виды страхования
+          </h2>
+          <ul class="insurance-options__list">
+            <li class="insurance-options__item"><a class="insurance-options__link _icon-insurance_types" href="#">КАСКО</a></li>
+            <li class="insurance-options__item"><a class="insurance-options__link _icon-insurance_types" href="#">Осаго</a></li>
+            <li class="insurance-options__item"><a class="insurance-options__link _icon-insurance_types" href="#">зеленая карта</a></li>
+          </ul>
+        </div>
+    </div>
+
+    <div class="travel-insurance__benefits online-order-benefits">
+      <h2 class="online-order-benefits__title title-black">
+        Преимущества заказа полиса онлайн - экономия 10%
+      </h2>
+      <div class="online-order-benefits__items">
+
+        <div class="online-order-benefits__item1 item-benefits">
+          <div class="item-benefits__image-wrapper">
+            <img class="item-benefits__image" width="40" height="40" src="../img/iconsfont/order_item3.svg" alt="icon_money"/>
+          </div>
+          <p class="item-benefits__title">
+            Безопасность платежей
+          </p>
+        </div>
+
+        <div class="online-order-benefits__item2 item-benefits">
+          <div class="item-benefits__image-wrapper">
+            <img class="item-benefits__image" width="36" height="36" src="../img/iconsfont/order_item4.svg" alt="icon_hourglass"/>
+          </div>
+          <p class="item-benefits__title">
+            Экономия времени
+          </p>
+        </div>
+        <div class="online-order-benefits__item3 item-benefits">
+          <div class="item-benefits__image-wrapper">
+          <img class="item-benefits__image" width="33" height="40" src="../img/iconsfont/order_item1.svg" alt="icon_shield"/>
+          </div>
+          <p class="item-benefits__title">
+            Гарантия законности
+          </p>
+        </div>
+        <div class="online-order-benefits__item4 item-benefits">
+          <div class="item-benefits__image-wrapper">
+            <img class="item-benefits__image" width="31" height="40" src="../img/iconsfont/order_item2.svg" alt="icon_house"/>
+          </div>
+          <p class="item-benefits__title">
+            Не выходя из дома
+          </p>
+        </div>  
+      </div>
+    </div>
+  </div>
+</section>

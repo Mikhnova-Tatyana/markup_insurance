@@ -1,0 +1,94 @@
+@use "sass:math";
+@import "calculation";
+@import "general";
+
+.insurance-types {
+  &__top {
+    @media (max-width: $mobile){
+      padding: 40px 0 60px 0;
+    }
+    @media (max-width: $tablet){
+      flex-wrap: wrap;
+    }
+    display: flex;
+    column-gap: 20px;
+    padding: 60px 0 80px 0;
+    align-items: center;
+  }
+  &__content {
+    @media (max-width: $tablet){
+      flex: 1 1 100%;
+      margin-bottom: 20px;
+    }
+    flex: 1 1 50%;
+  }
+  &__image {
+    @media (max-width: $tablet){
+      flex: 1 1 100%;
+      text-align: center;
+    }
+    flex: 1 1 50%;
+    text-align: right;
+  }
+  &__text {
+    font-size: rem(18);
+    line-height: math.div(27, 18);
+  }
+  &__options {
+    @media (max-width: 1500px){ 
+      justify-content: center;
+      column-gap: 25px;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 25px;
+  }
+ 
+  &__item {
+    position: relative;
+    flex: 0 1 25%;
+  }
+  &__picture {
+    @media (max-width: $mobile){
+      max-height: 182px;
+      max-width: 100%;
+    }
+    max-height: 200px;
+    border-radius: 8px;
+  }
+  &__link {
+    @media (max-width: $mobile){
+      left: 50%;
+      bottom: 24px;
+      transform: translateX(-50%);
+    }
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+    font-weight: 600;
+    font-size: rem(22);
+    line-height: math.div(22, 22);
+    color: #fff;
+    white-space: nowrap;
+  }
+  &__bottom {
+    padding-bottom: calc(60px + (100 - 60) * ((100vw - 360px) / (1530 - 360)));
+  }
+}
+
+.title-top {
+  margin-bottom: calc(18px + (32 - 18) * ((100vw - 360px) / (1530 - 360)));
+}
+
+.title-bottom {
+  margin-bottom: calc(20px + (44 - 20) * ((100vw - 360px) / (1530 - 360)));
+}
+
+.image-insurance {
+  &__image {
+    border-radius: 8px;
+    max-width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,179 @@
+@use "sass:math";
+@import "calculation";
+@import "general";
+
+.contact-block {
+  &__container {
+    @media (max-width: 1250px){
+      flex-direction: column;
+      align-items: center;
+    }
+    display: flex;
+    column-gap: 20px;
+  } 
+  &__form-wrapper {
+    @media (max-width: 1250px){
+      flex: 1 1 100%;
+      padding: 40px 0 80px 0;
+    }
+    flex: 1 1 48%;
+    padding: 70px 0 100px 0;
+  }
+  &__instructions-wrapper {
+    @media (max-width: 1250px){
+      padding-right: 0;
+    }
+    flex: 1 1 52%;
+    padding-right: calc(0px + (145 - 0) * (100vw - 360px) / (1530 - 360));
+  }
+  &__instructions {
+    @media (max-width: 1250px){
+      flex: 1 1 100%;
+      justify-content: center;
+      margin: 0;
+    }
+    max-width: 695px;
+    margin: 161px 0 145px 0;
+    background-color: #353D52;
+    border-radius: 12px;
+  }
+  &__title {
+    @media (max-width: $mobile){
+      margin-bottom: 32px;
+    }
+    margin-bottom: 40px;
+  }
+}
+
+.form-contacts {
+  max-width: 490px;
+
+  &__data {
+    @media (max-width: $tablet){
+      display: block;
+    }
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+  }
+  &__label {
+    display: inline-block;
+    font-weight: 600;
+    font-size: rem(16);
+    line-height: 163.42%;
+  }
+  &__input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D7E1E9;
+    border-radius: 6px;
+    font-family: 'Proxima Nova';
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: rem(18);
+
+    &.input-validation + p {
+      margin-top: 8px;
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 16px;
+      color: #F6372B;
+    }
+  }
+  &__input:focus {
+    border-color: #353D52;
+    outline: none;
+  }
+  &__user-name {
+    margin-bottom: 24px;
+  }
+  &__user-number {
+    margin-bottom: 24px;
+  }
+  &__textarea {
+    box-sizing: border-box;
+    margin-bottom: 32px;
+    width: 100%;
+    border: 1px solid #D7E1E9;
+    border-radius: 6px;
+    height: 124px;
+    padding: 10px;
+    resize: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 163.42%;
+    font-family: 'Proxima Nova';
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: rem(18);
+  }
+  &__textarea:focus {
+    border-color: #353D52;
+    outline: none;
+  }
+  &__button {
+    padding: calc(19px + (22 - 19) * ((100vw - 360px) / (1530 - 360))) calc(60.8px + (48.5 - 60.8) * ((100vw - 360px) / (1530 - 360)));
+    white-space: nowrap;
+  }
+
+}
+
+.instructions {
+  @media (max-width: $mobile){
+    padding: 40px 16px;
+  }
+  padding: 64px;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    @media (min-width: $mobile){
+      content: "";
+      position: absolute;
+      bottom: 45%;
+      left: 55%;
+      width: 435.59px;
+      height: 435.59px;
+      border-radius: 50%;;
+      background: repeating-linear-gradient(135deg, #E7EAFF, #E7EAFF 2px, transparent 2px, transparent 10px);
+      opacity: 0.1;
+    }
+  }
+     
+  &__list {
+    @media (max-width: $mobile){
+      row-gap: math.div(16, 768) * 100vw;
+      margin-top: 32px;
+      font-size: rem(18);
+      line-height: 120%;
+    }
+    color: #fff;
+    margin-top: 32px;
+    font-weight: 400;
+    font-size: rem(24);
+    line-height: 100%;
+  }
+  &__item {
+    @media (max-width: $mobile){
+      margin-bottom: 12px;
+    }
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 19px;
+  }
+  &__item::before{
+    position: absolute;
+    content: '';;
+    top: 7px;
+    left: 0;
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    opacity: 0.5;
+  }
+  &__title {
+    white-space: nowrap;
+  }
+}

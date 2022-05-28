@@ -1,0 +1,89 @@
+@use "sass:math";
+@import "calculation";
+@import "general";
+
+.green-card {
+  &__wrapper {
+    padding: calc(30px + (60 - 30) * ((100vw - 360px) / (1530 - 360))) calc(0px + (130 - 0) * ((100vw - 360px) / (1530 - 360)));
+  } 
+  
+  &__body {
+    @media (max-width: $mobile){
+      padding: 24px 24px 32px;
+    }
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 32px 100px 26px;
+  }
+
+  &__title {
+    padding-bottom: rem(32);
+    border-bottom: 1px solid #CFDAE2;
+  }
+}
+
+.insurance-table {
+  @media (max-width: $mobile){
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  @media (max-width: 1100px){
+    justify-content: center;
+    column-gap: 40px;
+  }
+  @media (min-width: $mobile){
+    row-gap: 40px;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 33px;
+  
+  &__item {
+    @media (max-width: $mobile){
+      margin-top: 18px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: rem(19);
+    color: #263238;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: 163.42%;
+    color: #001237;
+  }
+  &__change {
+    @media (max-width: $mobile){
+    padding-top: 24px;
+    }
+    .button-change {
+      padding: calc(20px + (22 - 20)*(100vw - 320px) / (1530 - 320)) calc(63px + (74 - 63) * (100vw - 320px) / (1530 - 320));
+      color: #2155CF;
+      border: 2px solid #2155CF;
+      display: inline-flex;
+      transition: background-color 0.3s ease 0s;
+
+      &::before {
+        padding-right: 6px; 
+      }
+      &:hover {
+        background-color: #2155CF;
+        cursor: pointer;
+        color: #FFFFFF;
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+@use "sass:math";
+@import "calculation";
+@import "general";
+
+.propositions {
+  &__wrapper {
+    padding: 0 calc(0px + (130 - 0) * ((100vw - 360px) / (1530 - 360)));
+  }
+  &__body {
+    @media (max-width: 1200px){
+      flex-wrap: wrap;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: calc(36px + (50 - 36) * ((100vw - 360px) / (1530 - 360))) 0;
+  }
+  &__content {
+    margin-bottom: calc(20px + (40 - 20) * ((100vw - 360px) / (1530 - 360)));
+  }
+  .content {
+    &__text {
+      @media (max-width: $mobile){
+        font-size: rem(16);
+        line-height: rem(20);
+      }
+      font-size: rem(18);
+      line-height: rem(22);
+    }
+    &__title {
+      @media (max-width: $mobile){
+        margin-top: 10px;
+        font-size: rem(26);
+      }
+      font-weight: 600;
+      font-size: rem(30);
+      line-height: rem(22);
+      margin-top: 24px;
+    }
+  }
+}
+
+.button-group {
+  display: inline-block;
+  font-size: 0;
+  white-space: nowrap;
+
+  &__button {
+    width: calc(109px + (185 - 109) * ((100vw - 360px) / (1530 - 360)));
+    min-height: 46px;
+    white-space: normal;
+    vertical-align: top;
+
+    &:first-child {
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+    &:last-child {
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+  }
+}
+
+.button-gray {
+  @media (max-width: 1200px){
+    font-size: rem(12);
+    line-height: rem(15);
+  }
+  font-weight: 400;
+  font-size: rem(16);
+  line-height: rem(19);
+  color:#7E8595;
+  background-color: #FFFFFF;
+  border: 1px solid #D7E1E9;
+
+  &:hover {
+    color: #001237;
+  }
+
+  &:nth-child(even) {
+    border-left: none;
+    border-right: none;
+  }
+  &._active {
+    background: rgba(33, 85, 207, 0.09);
+    color: #001237;
+    font-weight: 600;
+  }
+}

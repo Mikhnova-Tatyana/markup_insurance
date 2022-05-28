@@ -1,0 +1,19 @@
+@use "sass:math";
+
+// to %
+@function prc($pxOne, $pxTwo) {
+  $result: math.div($pxOne, $pxTwo) * 100%;
+  @return $result;
+}
+
+// to rem
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+  @return $result;
+}
+
+// to em
+@function em($px, $fontSize:16) {
+  $result: math.div($px, $fontSize) + em;
+  @return $result;
+}

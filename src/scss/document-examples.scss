@@ -1,0 +1,63 @@
+@use "sass:math";
+@import "calculation";
+@import "general";
+
+
+.document-examples {
+  &__body {
+    padding: 90px 0;
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: calc(32px + (50 - 32) * ((100vw - 360px) / (1530 - 360)));
+  }
+  &__buttons {
+    margin-bottom: 42px;
+    display: inline-block;
+    font-size: 0;
+  }
+  &__button {
+    width: calc(164px + (196 - 164) * ((100vw - 360px) / (1530 - 360)));
+    height: 46px;
+
+    &:first-child {
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+  
+    &:last-child {
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+  }
+}
+
+.slider-documents {
+  overflow: hidden;
+
+  &__image {
+    @media (max-width: $mobile) {
+      height: 154px;
+      max-width: 156px;
+    } 
+    height: 360px;
+    max-width: 354px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 46px rgba(123, 139, 181, 0.16);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image picture {
+    max-width: 100%;
+  }
+
+}
+
+.document-examples__slider-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  gap: 18px;
+}

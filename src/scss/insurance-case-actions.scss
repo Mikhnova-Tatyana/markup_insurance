@@ -1,0 +1,222 @@
+@use "sass:math";
+@import "calculation";
+@import "general";
+
+.insurance-case-actions {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &__body {
+    @media (max-width: 1300px){
+      display: flex;
+      flex-direction: column-reverse;
+      padding-top: 32px;
+    }
+    position: relative;
+    background-color: #072D85;
+    color: #FFFFFF;
+    border-radius: rem(12);
+    display: flex;
+    padding-top: 72px;
+    overflow: hidden;
+
+    &::before {
+      @media (max-width: 1300px){
+        top: 450px;
+      }
+      @media (max-width: $mobile){
+        width: 234px;
+        height: 234px;
+        left: -50px;
+        top: 350px;
+        background: repeating-linear-gradient(45deg, #E7EAFF, #E7EAFF 2px, transparent 2px, transparent 7px);
+      }
+      @media (max-width: $mobileSmall){
+        left: -50px;
+        top: 470px;
+      }
+      
+      position: absolute;
+      content: "";
+      width: 435.59px;
+      height: 435.59px;
+      left: 150px;
+      top: 50px;
+      border-radius: 50%;;
+      background: repeating-linear-gradient(135deg, #E7EAFF, #E7EAFF 2px, transparent 2px, transparent 10px);
+      opacity: 0.1;
+    }
+  }
+
+  &__picture {
+    @media (max-width: 1300px){
+      padding-bottom: 460px;
+      padding-right: 0;
+    }
+    @media (max-width: $mobile){
+      background: url(../img/contract_small.svg) no-repeat;
+      padding-bottom: 200px;
+    }
+    flex: 1 1 43%;
+    background: url(../img/contract_big.svg) no-repeat;
+  }
+}
+
+.instruction {
+  flex: 1 1 57%;
+  @media (max-width: 1300px){
+    padding: 0 calc(0px + (25 - 0) * ((100vw - 360px) / (992 - 360)));
+  }
+
+  &__title {
+    @media (max-width: $mobile){
+      font-size: rem(26);
+      line-height: 100%;
+    }
+    @media (max-width: $tablet){
+      padding: 0 25px;
+    }
+    font-weight: 700;
+    font-size: rem(46);
+    line-height: rem(50);
+  }
+  
+  &__list {
+    @media (max-width: $mobile){
+      row-gap: math.div(16, 768) * 100vw;
+      margin: 32px 0;
+      font-size: rem(18);
+      line-height: 120%;
+    }
+    @media (max-width: $tablet){
+      padding: 0 25px;
+    }
+    margin: 36px 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: rem(24);
+    line-height: 100%;
+    row-gap: math.div(20,1530) * 100vw;
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    &::before {
+      font-size: rem(20);
+      margin-right: em(21, 20);
+      color: #F1F8FE;
+    }
+  }
+
+  &__button {
+    @media (max-width: 1300px){
+      text-align: center;
+    }
+  }
+}
+
+.button-instruction {
+  @media (max-width: $mobile){
+    padding: rem(20) rem(34);
+    margin-bottom: 35px;
+  }
+  padding: rem(27) rem(63.5);
+  margin-bottom: 88px;
+  white-space: nowrap;
+}
+
+.online-insurance {
+  @media (max-width: $mobile){
+    padding-left: 0;
+    padding-right: 0;
+  }
+  padding: 70px 145px 0 145px;
+
+  &__title {
+    @media (max-width: $mobile){
+      font-size: rem(20);
+    line-height: rem(24);
+    }
+    font-size: rem(36);
+    line-height: rem(44);
+    font-weight: 800;
+    margin-bottom: 16px;
+  }
+  &__text {
+    @media (max-width: $mobile){
+      height: 185px;
+    }
+    position: relative;
+    color: #263238;
+    opacity: 0.8;
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: rem(23);
+    height: 235px;
+
+    &::after {
+      @media (max-width: $mobile){
+        height: 41px;
+        background: linear-gradient(360deg, #E5E5E5 10%, rgba(255, 255, 255, 0) 100%);
+      }
+      position: absolute;
+      content: "";
+      bottom: 0;
+      width: 100%;
+      height: 71px;
+      background: linear-gradient(360deg, #E5E5E5 28.73%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+  .text-insurance__item {
+    margin-bottom: 20px;
+  }
+  .text-insurance__item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .simplebar-track.simplebar-vertical {
+    background-color: #F3F4F5;
+    width: 2px;
+    overflow: visible;
+  }
+  .simplebar-content-wrapper {
+    @media (max-width: $mobile){
+      padding-right: 20px; 
+    }
+    padding-right: 30px; 
+  }
+  .simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+    left: -4px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    height: 23px;
+    background: #265FD1;
+    border-radius: 5px;
+    opacity: 1;
+  }
+}
+
+.item-pc {
+  @media (max-width: $mobile){
+    display: none;
+  }
+  display: block;
+}
+
+.item-mobile {
+  @media (max-width: $mobile){
+    display: block;
+  }
+  display: none;
+}
+
+._hide-pc {
+  @media (max-width: $mobile){
+    display: block;
+  }
+  display: none;
+}
